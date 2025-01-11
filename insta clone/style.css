@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: rgb(65, 70, 158);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.instagram p {
+    padding: 2px;
+    margin-left:5px ;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   
+}
+.card{
+    height: 450px;
+    width: 300px;
+    border-radius: 15px;
+    background-color:rgb(27, 26, 26);
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+.card::-webkit-scrollbar{
+    display: none;
+}
+.stoyian{
+    height: 120px;
+    width: 290px;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.stoyian::-webkit-scrollbar{
+    display: none;
+}
+.story{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid orange;
+   overflow: hidden;
+   
+}
+.story img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.mainimg img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+   
+}
+
+.image2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.full-screen{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+   background-position: center;
+    position: absolute;
+    display: none;
+}
+
+.likedimg i{
+    color: white;
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.5s;
+}
+.image {
+ height:30px;
+ width: 30px;
+ border-radius: 50%;
+ overflow: hidden;
+ display: inline-block;
+ 
+}
+.image img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    object-position: top;
+}
+ .username{
+  font-weight: bolder;
+  transform: translate(45px,-30px);
+  
+}
+.elon{
+  font-weight: bolder;
+  transform: translate(45px,-30px);
+  
+}
+.share img{
+  height: 45px;
+  width: 300px;
+  object-fit: cover;
+  background-color: black;
+}
