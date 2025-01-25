@@ -1,0 +1,25 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.conatiner{
+    padding: 10px;
+    border-radius: 10px;
+    height: auto;
+    width: auto;
+    background-color: rgb(41, 213, 156);
+}
+button{
+    background-color: rgb(95, 160, 127);
+    color: #fff;
+    margin-left:50px;
+    font-weight: 700;
+    padding : 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
