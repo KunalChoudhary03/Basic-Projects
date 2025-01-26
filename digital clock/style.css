@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html body{
+    display: grid;
+    place-items: center;
+    background: rgb(1, 59, 78);
+}
+.wrapper{
+    width: auto;
+    height: 40vh;
+    padding: 12px;
+    background: rgb(152,2,81);
+    background: linear-gradient(90deg, rgba(152,2,81,1) 16%, rgba(172,48,23,1) 58%, rgba(139,0,255,1) 100%);
+    margin:6% ;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px goldenrod;
+}
+.wrapper .clock{
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: auto;
+    height: 39vh;
+    border-radius: 7px;
+    background: rgb(1, 59, 78);
+}
+.clock #time {
+    font-size: 65px;
+    padding: 12px;
+    color: wheat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.clock #date{
+    font-size: 65px;
+    padding: 12px;
+    color: wheat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
