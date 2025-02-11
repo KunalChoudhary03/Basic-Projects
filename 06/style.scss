@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #0e0e0e;
+}
+html{
+    font-family: sans-serif;
+
+}
+main{
+    width: 100%;
+}
+.view-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 4rem;
+
+    img{
+        width: 80%;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+    
+    h1{
+        font-size: 3rem;
+        text-align: center;
+        font-weight: 100;
+    }
+    p{
+        text-align: center;
+        font-weight: 100 ;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin: 0.9rem 0;
+        opacity: 0.6;
+    }
+    br{
+        display: none;
+    }
+}
+.view-2{
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    .marquee{
+        display: flex;
+        gap: 3rem;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    
+    &::after{
+     content: "";
+     height: 100%;
+     width: 50%;
+     position: absolute;
+     background-image: linear-gradient(to right, #0e0e0e 0%, transparent 100%);
+        top: 0;
+        left: 0;
+    }
+    .text{
+   display: flex;
+   gap: 3rem;
+   animation: marquee 10s linear infinite both;
+   padding: 0 1.5rem;
+   p{
+   font-size: 2rem;
+   font-weight:200;
+   }
+    }}
+}
+h1,
+p{
+    color: white;
+
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+    
+}
+@media (min-width:1020px){
+    html{
+        font-size: clamp(16px, 1vw , 20px);
+    }
+    .view-1{
+        img{
+            width: 28%;
+        }
+        h1{
+            font-size: 8rem;
+            font-weight: 100;
+        }
+        p{
+            font-size: 1.5rem;
+            br{
+                display: block;
+            }
+        }
+    }
+    .view-2{
+        width: 60%;
+        padding: 2rem 4rem;
+        display: flex;
+        align-items: center;
+        margin-left: 20%;
+    }
+}
