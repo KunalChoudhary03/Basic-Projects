@@ -1,0 +1,541 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 1.5rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .nav .nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+main .nav .login {
+  padding: 0.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+main .nav .ul-wala {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+main .nav .ul-wala .ul {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 1rem;
+  background-color: rgb(127, 127, 127);
+  width: 100%;
+  text-align: center;
+}
+main .nav .ul-wala .ul li {
+  font-weight: bolder;
+  cursor: pointer;
+  display: grid;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 1rem;
+}
+main .nav .burger {
+  display: flex;
+  padding: 0.5rem;
+}
+main .nav .burger img {
+  height: 1.5rem;
+}
+main .hero-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .hero-text img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .hero-text .text {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+}
+main .hero-text .text p {
+  text-transform: uppercase;
+}
+main .image-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .image-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .image-text .top img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .image-text .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .image-text .bottom h1 {
+  font-size: 2.7rem;
+  font-weight: 200;
+  line-height: 1;
+  text-transform: uppercase;
+}
+main .image-text .bottom p {
+  font-size: 1.4em;
+  font-weight: 200;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+main .image-text .bottom .services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+main .image-text .bottom .services .service {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main .image-text .bottom .services .service p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.7em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+main .verticle-text {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+}
+main .verticle-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .verticle-text .top img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .verticle-text .bottom {
+  display: flex;
+  gap: 2em;
+}
+main .verticle-text .bottom p {
+  writing-mode: vertical-rl;
+  padding-top: 0.6em;
+}
+main .verticle-text .bottom .text h1 {
+  font-size: 3em;
+  font-weight: 200;
+}
+main .verticle-text .bottom .text p {
+  writing-mode: initial;
+  line-height: 1.5;
+  font-family: monospace;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+main .Our-services {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .Our-services .heading {
+  font-size: 2.5rem;
+  font-weight: 400;
+  padding-bottom: 0.5em;
+}
+main .Our-services .section .brand {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+main .Our-services .section .niche {
+  font-size: 1.4em;
+  font-weight: 200;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.8;
+  padding-bottom: 1.4rem;
+}
+main .Our-services .section .arrow {
+  display: flex;
+  padding-bottom: 2rem;
+}
+main .Our-services .section .arrow svg {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 10rem;
+  background-color: black;
+  color: white;
+  margin-right: 1rem;
+}
+main .Our-services .section .arrow p {
+  font-size: 1.2em;
+  font-weight: 200;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.8;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+}
+main .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-2 .selected {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .view-2 .selected img {
+  width: 100%;
+}
+main .view-2 .container {
+  height: 110vh;
+  width: 100%;
+}
+main .view-2 .container .text .main-heading {
+  font-size: 3rem;
+}
+main .view-2 .container .text .other {
+  font-size: 1rem;
+  font-family: monospace;
+}
+main .view-2 .container .imgess {
+  width: 100%;
+}
+main .view-2 .container .imgess .not-img {
+  display: none;
+}
+main .view-2 .container .imgess img {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.relative-wala {
+  width: 100%;
+  overflow-x: hidden;
+}
+.relative-wala .footter {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+.relative-wala .footter .lets {
+  padding: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  padding-top: 5rem;
+  text-transform: uppercase;
+  font-family: Roboto Mono, sans-serif;
+}
+.relative-wala .footter .un {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  color: white;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.relative-wala .footter .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.relative-wala .footter .btn button {
+  border-radius: 2rem;
+  margin: 3rem;
+  padding: 0.7rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: white;
+  font-family: monospace;
+  color: black;
+  font-weight: bolder;
+}
+.relative-wala .footter .copyright {
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  font-weight: 300;
+  font-size: larger;
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 4rem;
+    gap: 4rem;
+  }
+  main .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main .nav .login {
+    padding: 0.5rem;
+    font-weight: bolder;
+  }
+  main .nav .burger {
+    display: none;
+    height: 2rem;
+    width: 2rem;
+  }
+  main .nav ul {
+    opacity: 2 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  main .nav ul li {
+    opacity: 1 !important;
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bolder;
+  }
+  main .image-text {
+    flex-direction: row-reverse;
+    gap: 4em;
+  }
+  main .image-text .bottom h1 {
+    font-size: 5em;
+    letter-spacing: 0.05em;
+  }
+  main .image-text .bottom p {
+    font-size: 2em;
+  }
+  main .image-text .bottom .services {
+    margin-top: auto;
+  }
+  main .image-text .bottom .services .service p {
+    font-size: 2em;
+  }
+  main .verticle-text {
+    flex-direction: row;
+    gap: 4em;
+  }
+  main .verticle-text .top {
+    width: 30%;
+  }
+  main .verticle-text .bottom {
+    width: 70%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  main .verticle-text .bottom .text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+  main .verticle-text .bottom .text h1 {
+    font-size: 6em;
+  }
+  main .verticle-text .bottom .text p {
+    margin-top: auto;
+  }
+  main .Our-services {
+    height: 100vh;
+    width: 100vw;
+    aspect-ratio: 1/1;
+    display: flex;
+  }
+  main .Our-services .heading {
+    font-size: 6rem;
+    font-weight: 300;
+    height: 15rem;
+    width: 15rem;
+  }
+  main .Our-services .section {
+    margin-bottom: 2rem;
+    aspect-ratio: 0.8/1;
+  }
+  main .Our-services .section .brand {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+  main .Our-services .section .niche {
+    font-size: 1.4em;
+    font-weight: 200;
+    font-family: monospace;
+    line-height: 1.5;
+    opacity: 0.8;
+    padding-bottom: 1.4rem;
+  }
+  main .Our-services .section .arrow {
+    display: flex;
+    padding-bottom: 2rem;
+  }
+  main .Our-services .section .arrow svg {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 10rem;
+    background-color: black;
+    color: white;
+    margin-right: 1rem;
+  }
+  main .Our-services .section .arrow p {
+    font-size: 1.2em;
+    font-weight: 200;
+    font-family: monospace;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-top: 0.3rem;
+    text-transform: uppercase;
+  }
+  main .Our-services .section .topper {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  main .Our-services .section .footer1 {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  main .Our-services .section .footer1 .line {
+    display: none;
+  }
+  main .image img {
+    height: 80%;
+    width: 100vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 0% -8%;
+       object-position: 0% -8%;
+    margin-top: 1.5rem;
+  }
+  main .container .imgess {
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+  main .container .imgess .first-class {
+    display: flex;
+    flex-direction: row;
+  }
+  main .container .imgess .first-class .not-img {
+    display: block;
+  }
+  main .container .imgess .first-class img {
+    margin-left: 2rem;
+    width: 30vw;
+  }
+  main .container .imgess .first-class .text {
+    margin-top: 3rem;
+    margin-left: 2rem;
+  }
+  main .container .imgess .first-class .text .main-heading {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  main .container .imgess .second-class {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  main .container .imgess .second-class .not-img {
+    display: block;
+  }
+  main .container .imgess .second-class img {
+    margin-left: 2rem;
+    width: 30vw;
+  }
+  main .container .imgess .second-class .text {
+    margin-top: 3rem;
+    width: 50%;
+  }
+  main .container .imgess .second-class .text .main-heading {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  .relative-wala {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .relative-wala .footter {
+    width: 100%;
+    height: 50%;
+    background-color: black;
+  }
+  .relative-wala .footter .lets {
+    padding: 2rem;
+    font-size: 12rem;
+    text-align: center;
+    color: white;
+    padding-top: 5rem;
+    text-transform: uppercase;
+    font-family: Roboto Mono, sans-serif;
+  }
+  .relative-wala .footter .un {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+  .relative-wala .footter .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .relative-wala .footter .btn button {
+    border-radius: 2rem;
+    margin: 3rem;
+    padding: 0.7rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: white;
+    font-family: monospace;
+    color: black;
+    font-weight: bolder;
+  }
+  .relative-wala .footter .copyright {
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-weight: 300;
+    font-size: larger;
+  }
+}/*# sourceMappingURL=style.css.map */
