@@ -3,6 +3,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(157,92,10,1) 59%, rgba(255,158,0,1) 100%);
 }
 .container{
     max-width: 500px;
