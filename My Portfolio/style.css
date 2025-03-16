@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: url("img/bg-gif.gif");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+.main-container .nav-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-container .nav-bar .my-name {
+  font-size: 1rem;
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.main-container .nav-bar .my-name span {
+  color: #ffff00;
+}
+.main-container .nav-bar .both_ham {
+  display: flex;
+  justify-content: space-between;
+}
+.main-container .nav-bar .both_ham .hamburger img {
+  display: none;
+}
+.main-container .nav-bar .both_ham ul {
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  gap: 1.5rem;
+  padding-left: 3rem;
+  cursor: pointer;
+}
+.main-container .nav-bar .both_ham ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+.main-container .nav-bar .both_ham ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.main-container .nav-bar .both_ham li:hover {
+  color: #ffff00;
+  text-decoration: underline;
+}
+.main-container .line {
+  padding: 3.5rem;
+}
+.main-container #main-box {
+  display: flex;
+}
+.main-container #main-box .written {
+  padding: 3.5rem;
+  margin-top: 7rem;
+  aspect-ratio: 1/1;
+}
+.main-container #main-box .written .mern {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid black;
+  font-size: 24px;
+  font-family: monospace;
+  color: white;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.6s infinite;
+}
+.main-container #main-box .written .hi {
+  font-size: 4rem;
+  color: white;
+}
+.main-container #main-box .written .hi span {
+  color: #ffff00;
+}
+.main-container #main-box .img {
+  height: 100%;
+  width: 100%;
+}
+.main-container #main-box .img img {
+  cursor: pointer;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30rem;
+  margin-top: 5rem;
+  margin-left: 15rem;
+  box-shadow: 0px 0px 100px 10px #ffff00;
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+.main-container #main-box .img img:hover {
+  box-shadow: 0px 0px 50px 15px #ff0000;
+}
+.main-container #about-me {
+  color: white;
+  aspect-ratio: 1/1;
+  height: 80vh;
+  width: 100vw;
+}
+.main-container #about-me .abt {
+  padding-left: 3.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main-container #about-me .abt span {
+  color: #ffff00;
+}
+.main-container #about-me .about {
+  display: flex;
+}
+.main-container #about-me .about .abt-img {
+  height: 100%;
+  width: 100%;
+}
+.main-container #about-me .about .abt-img img {
+  height: 100%;
+  padding: 3.5rem;
+  cursor: pointer;
+  border-radius: 10rem;
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+.main-container #about-me .about .abt-me {
+  margin-top: 8rem;
+  padding: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+.main-container #about-me .about .abt-me span {
+  color: #ffff00;
+}
+.main-container #skill-box .skills {
+  color: white;
+}
+.main-container #skill-box .skills .skill-text {
+  padding-left: 3.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main-container #skill-box .skills .skill-text span {
+  color: #ffff00;
+}
+.main-container #skill-box .skills img {
+  padding: 3.5rem;
+  border-radius: 2rem;
+  filter: grayscale(50%);
+}
+.main-container #project {
+  color: white;
+}
+.main-container #project .project-text {
+  padding-left: 3.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main-container #project .project-text span {
+  color: #ffff00;
+}
+.main-container #project .project-img a img {
+  height: 30rem;
+  width: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 2rem;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+.main-container #project .project-img img:hover {
+  box-shadow: 0px 0px 50px 10px #ffff00;
+}
+.main-container #My-certifiaction {
+  padding-left: 3.5rem;
+  color: white;
+}
+.main-container #My-certifiaction .Services {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main-container #My-certifiaction .Services span {
+  color: #ffff00;
+}
+.main-container #My-certifiaction .para {
+  padding: 3.5rem;
+  font-size: 2rem;
+}
+.main-container #location {
+  width: 100%;
+  color: white;
+}
+.main-container #location .Location {
+  padding-left: 3.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.main-container #location .Location span {
+  color: #ffff00;
+}
+.main-container #location .map iframe {
+  padding: 3.5rem;
+  width: 100vw;
+}
+.main-container #contact-me {
+  color: white;
+  padding-left: 3.5rem;
+}
+.main-container #contact-me .contact {
+  cursor: pointer;
+  font-size: 2rem;
+}
+.main-container #contact-me .contact span {
+  color: #ffff00;
+}
+.main-container #contact-me .both {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+.main-container #contact-me .both .logo img {
+  height: 2rem;
+  cursor: pointer;
+}
+.main-container #contact-me .both .logo .gmail {
+  display: flex;
+  padding-top: 2rem;
+  font-weight: bold;
+  align-items: center;
+  gap: 1rem;
+}
+.main-container #contact-me .both .logo .phone {
+  display: flex;
+  padding-top: 2rem;
+  font-weight: bold;
+  align-items: center;
+  gap: 1rem;
+}
+.main-container #contact-me .both .logo .btn button {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  margin-top: 1rem;
+  background-color: #ffff00;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.main-container #contact-me .both .input {
+  display: flex;
+  flex-direction: column;
+}
+.main-container #contact-me .both .input input {
+  padding: 1rem 2rem 1rem 2rem;
+  margin: 1rem 5rem 1rem 5rem;
+  width: 40vw;
+  background-color: #494848;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  border: none;
+}
+.main-container #contact-me .both .input input input::-moz-placeholder {
+  color: white;
+}
+.main-container #contact-me .both .input input input::placeholder {
+  color: white;
+}
+.main-container #contact-me .both .input #msg {
+  padding-bottom: 5rem;
+}
+.main-container #contact-me .both .input button {
+  display: flex;
+  align-self: center;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  margin-top: 1rem;
+  background-color: #ffff00;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+@media (max-width: 900px) {
+  .nav-bar {
+    top: 0;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-bar .both_ham {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-bar .both_ham .hamburger img {
+    display: block !important;
+    height: 2.5rem;
+    padding-left: 5rem;
+  }
+  .nav-bar .both_ham .my-name {
+    font-size: 1rem;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .nav-bar .both_ham .my-name span {
+    color: #ffff00;
+  }
+  .nav-bar .both_ham .ull {
+    position: relative;
+    padding-left: 1rem;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-self: center;
+  }
+  .nav-bar .both_ham .ull ul {
+    width: 100vw;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 2rem;
+    top: 1rem;
+    opacity: 0;
+    background-color: #ffff00;
+    color: white;
+    opacity: 0;
+  }
+  .nav-bar .both_ham .ull ul li {
+    list-style: none;
+    padding: 0.5rem;
+  }
+  .nav-bar .both_ham .ull ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  #main-box {
+    padding: 0rem;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+  #main-box .written {
+    text-align: center;
+  }
+  #main-box .img {
+    height: 100%;
+    width: 100%;
+  }
+  #main-box .img img {
+    display: none;
+  }
+  #about-me .abt {
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  #about-me .about {
+    display: flex;
+    flex-direction: column;
+  }
+  #about-me .about .abt-img img {
+    display: none;
+  }
+  #about-me .about .abt-me {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 1rem;
+  }
+  #skill-box {
+    height: 100%;
+    width: 100%;
+  }
+  #skill-box .skills .skill-text {
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  #skill-box .skills img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 1rem;
+  }
+  #project {
+    display: flex;
+    flex-direction: column;
+  }
+  #project .project-text {
+    padding-left: 1rem;
+    font-size: 2rem;
+  }
+  #project .project-img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #project .project-img a img {
+    margin: 1rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 2rem;
+    border-radius: 3rem;
+  }
+  #project .project-img img:hover {
+    box-shadow: 0px 0px 50px 15px #ff0000;
+  }
+  #My-certifiaction {
+    padding-left: 1rem;
+  }
+  #My-certifiaction .Services {
+    font-size: 2rem;
+    height: 1rem;
+    padding: 0;
+  }
+  #My-certifiaction .para {
+    padding: 1rem;
+    font-weight: bolder;
+  }
+  #contact-me {
+    padding-left: 1rem;
+  }
+  #contact-me .both {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-me .both .input {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-me .both .input input {
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 1rem 5rem 1rem 5rem;
+    width: 40vw;
+  }
+}/*# sourceMappingURL=style.css.map */
