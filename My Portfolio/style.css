@@ -8,7 +8,7 @@ html, body {
   height: 100vh;
   width: 100%;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-image: url("img/bg-gif.gif");
+  background-image: url("img/bg-1-gif.gif");
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ body {
   cursor: pointer;
 }
 .main-container .nav-bar .my-name span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container .nav-bar .both_ham {
   display: flex;
@@ -65,14 +65,16 @@ body {
   color: whitesmoke;
 }
 .main-container .nav-bar .both_ham li:hover {
-  color: #ffff00;
+  color: #0CAFFF;
   text-decoration: underline;
 }
 .main-container .line {
-  padding: 3.5rem;
+  margin: 3.5rem;
+  box-shadow: 0px 0px 100px 10px #0CAFFF;
 }
 .main-container #main-box {
   display: flex;
+  flex-direction: row-reverse;
 }
 .main-container #main-box .written {
   padding: 3.5rem;
@@ -94,7 +96,7 @@ body {
   color: white;
 }
 .main-container #main-box .written .hi span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container #main-box .img {
   height: 100%;
@@ -108,7 +110,7 @@ body {
   height: 30rem;
   margin-top: 5rem;
   margin-left: 15rem;
-  box-shadow: 0px 0px 100px 10px #ffff00;
+  box-shadow: 0px 0px 100px 10px #0CAFFF;
   animation: floatUpDown 2s ease-in-out infinite;
 }
 .main-container #main-box .img img:hover {
@@ -119,6 +121,7 @@ body {
   aspect-ratio: 1/1;
   height: 80vh;
   width: 100vw;
+  background-color: black;
 }
 .main-container #about-me .abt {
   padding-left: 3.5rem;
@@ -126,7 +129,7 @@ body {
   cursor: pointer;
 }
 .main-container #about-me .abt span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container #about-me .about {
   display: flex;
@@ -143,6 +146,7 @@ body {
   animation: floatUpDown 2s ease-in-out infinite;
 }
 .main-container #about-me .about .abt-me {
+  height: 100vh;
   margin-top: 8rem;
   padding: 3.5rem;
   font-size: 1.5rem;
@@ -150,7 +154,7 @@ body {
   line-height: 2.5rem;
 }
 .main-container #about-me .about .abt-me span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container #skill-box .skills {
   color: white;
@@ -161,15 +165,26 @@ body {
   cursor: pointer;
 }
 .main-container #skill-box .skills .skill-text span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
-.main-container #skill-box .skills img {
-  padding: 3.5rem;
-  border-radius: 2rem;
-  filter: grayscale(50%);
+.main-container #skill-box .skills .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container #skill-box .skills .logo img {
+  height: 5rem;
+  width: 5rem;
+  margin: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: floatUpDown 3s ease infinite;
 }
 .main-container #project {
   color: white;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 .main-container #project .project-text {
   padding-left: 3.5rem;
@@ -177,19 +192,40 @@ body {
   cursor: pointer;
 }
 .main-container #project .project-text span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
-.main-container #project .project-img a img {
-  height: 30rem;
-  width: 30rem;
+.main-container #project .project-img {
+  padding-left: 5rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 10rem;
+}
+.main-container #project .project-img .card {
+  width: 20rem;
+  height: 25rem;
+  background-color: rgb(1, 45, 72);
+  border-radius: 1rem;
+}
+.main-container #project .project-img .card .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+.main-container #project .project-img .card .image img {
+  border-radius: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
-  padding: 2rem;
-  cursor: pointer;
-  border-radius: 3rem;
+  height: 15rem;
+  width: 100%;
+  display: block;
 }
-.main-container #project .project-img img:hover {
-  box-shadow: 0px 0px 50px 10px #ffff00;
+.main-container #project .project-img .card .text p {
+  font-size: bolder;
+  padding-left: 2rem;
+}
+.main-container #project .card:hover {
+  box-shadow: 0px 0px 100px 10px #0CAFFF;
 }
 .main-container #My-certifiaction {
   padding-left: 3.5rem;
@@ -200,7 +236,7 @@ body {
   cursor: pointer;
 }
 .main-container #My-certifiaction .Services span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container #My-certifiaction .para {
   padding: 3.5rem;
@@ -209,6 +245,7 @@ body {
 .main-container #location {
   width: 100%;
   color: white;
+  background-color: black;
 }
 .main-container #location .Location {
   padding-left: 3.5rem;
@@ -216,7 +253,7 @@ body {
   cursor: pointer;
 }
 .main-container #location .Location span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container #location .map iframe {
   padding: 3.5rem;
@@ -231,7 +268,7 @@ body {
   font-size: 2rem;
 }
 .main-container #contact-me .contact span {
-  color: #ffff00;
+  color: #0CAFFF;
 }
 .main-container #contact-me .both {
   display: flex;
@@ -259,7 +296,7 @@ body {
 .main-container #contact-me .both .logo .btn button {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   margin-top: 1rem;
-  background-color: #ffff00;
+  background-color: #0CAFFF;
   color: black;
   font-weight: bold;
   border: none;
@@ -295,12 +332,15 @@ body {
   align-self: center;
   padding: 0.5rem 2rem 0.5rem 2rem;
   margin-top: 1rem;
-  background-color: #ffff00;
+  background-color: #0CAFFF;
   color: black;
   font-weight: bold;
   border: none;
   cursor: pointer;
   border-radius: 0.5rem;
+}
+.main-container #contact-me .social-img img {
+  border-radius: 50%;
 }
 
 @keyframes typing {
@@ -317,7 +357,7 @@ body {
   }
 }
 @keyframes floatUpDown {
-  0%, 100% {
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -350,37 +390,29 @@ body {
     font-weight: bolder;
     cursor: pointer;
   }
-  .nav-bar .both_ham .my-name span {
-    color: #ffff00;
-  }
   .nav-bar .both_ham .ull {
     position: relative;
-    padding-left: 1rem;
+    margin-left: 2rem !important;
     height: 100%;
     width: 100%;
-    display: grid;
-    place-self: center;
   }
   .nav-bar .both_ham .ull ul {
     width: 100vw;
+    height: 50vh;
     position: absolute;
-    right: 0;
-    top: 3rem;
     display: flex;
+    right: 1rem;
+    top: 3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     border-radius: 2rem;
-    top: 1rem;
     opacity: 0;
-    background-color: #ffff00;
-    color: white;
-    opacity: 0;
+    background-color: #0CAFFF;
   }
   .nav-bar .both_ham .ull ul li {
     list-style: none;
-    padding: 0.5rem;
+    padding: 0.5rem !important;
   }
   .nav-bar .both_ham .ull ul li a {
     text-decoration: none;
@@ -390,17 +422,36 @@ body {
     padding: 0rem;
     margin-left: 0rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
   }
   #main-box .written {
     text-align: center;
   }
+  #main-box .written .mern {
+    font-size: 18px !important;
+  }
+  #main-box .written .hi {
+    font-size: 3rem !important;
+  }
   #main-box .img {
     height: 100%;
     width: 100%;
+    display: grid !important;
+    place-items: center !important;
   }
   #main-box .img img {
-    display: none;
+    cursor: pointer;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 20rem !important;
+    margin-top: 1rem;
+    margin-left: 1rem !important;
+    box-shadow: 0px 0px 100px 10px #ffff00;
+    animation: floatUpDown 2s ease-in-out infinite;
+  }
+  #about-me {
+    height: 100vh;
   }
   #about-me .abt {
     padding-left: 1rem;
@@ -414,11 +465,12 @@ body {
     display: none;
   }
   #about-me .about .abt-me {
-    margin-top: 2rem;
-    padding: 1rem;
-    font-size: 2rem;
+    margin-top: 1rem !important;
+    padding-left: 2rem !important;
+    font-size: 1.3rem !important;
     font-weight: bolder;
     line-height: 1rem;
+    height: 80vh !important;
   }
   #skill-box {
     height: 100%;
@@ -428,36 +480,35 @@ body {
     padding-left: 1rem;
     font-size: 2rem;
   }
-  #skill-box .skills img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    padding: 1rem;
+  #skill-box .skills .logo img {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+    margin: 0.5rem !important;
+    border-radius: 50%;
+    margin-top: 2rem !important;
+    cursor: pointer;
   }
   #project {
+    padding-left: 0.5rem !important;
     display: flex;
     flex-direction: column;
   }
   #project .project-text {
-    padding-left: 1rem;
     font-size: 2rem;
   }
   #project .project-img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: contain;
-       object-fit: contain;
+    padding-left: 0.5rem !important;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  #project .project-img a img {
-    margin: 1rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    padding: 2rem;
-    border-radius: 3rem;
-  }
-  #project .project-img img:hover {
-    box-shadow: 0px 0px 50px 15px #ff0000;
+  #project .project-img .card {
+    width: 20rem;
+    height: 25rem;
+    background-color: gray;
+    border-radius: 1rem;
   }
   #My-certifiaction {
     padding-left: 1rem;
@@ -465,26 +516,39 @@ body {
   #My-certifiaction .Services {
     font-size: 2rem;
     height: 1rem;
-    padding: 0;
+    padding: 1rem !important;
   }
   #My-certifiaction .para {
-    padding: 1rem;
+    margin-top: 2rem;
+    padding: 1rem !important;
     font-weight: bolder;
   }
   #contact-me {
-    padding-left: 1rem;
+    padding-left: 1rem !important;
+  }
+  #contact-me .contact {
+    padding-left: 2rem !important;
   }
   #contact-me .both {
+    padding-left: 2rem !important;
     display: flex;
     flex-direction: column;
   }
   #contact-me .both .input {
     display: flex;
     flex-direction: column;
+    padding-left: 1rem !important;
+    margin: 0 !important;
   }
   #contact-me .both .input input {
-    padding: 1rem 2rem 1rem 2rem;
-    margin: 1rem 5rem 1rem 5rem;
-    width: 40vw;
+    padding-left: 1rem !important;
+    width: 60vw !important;
+    margin: 0 !important;
+    margin-top: 1rem !important;
+  }
+  #contact-me .social-img img {
+    text-decoration: none !important;
+    margin: 1rem !important;
+    border-radius: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
