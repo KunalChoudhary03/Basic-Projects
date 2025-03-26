@@ -1,5 +1,4 @@
-
-    let flag = 0;
+let flag = 0;
     let b = document.querySelector("ul");
 
     function myFun() {
