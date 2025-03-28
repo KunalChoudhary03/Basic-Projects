@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#card{
+    height: 20%;
+    width: 80%;
+    padding: 4rem;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+#card .container{
+    height: 3rem;
+    width: 90%;
+    background-color: gray;
+    border-radius: 2rem;
+}
+.container .green{
+    height: 3rem;
+    width: 0%;
+    background-color: green;
+    border-radius: 2rem;
+}
+.btn{
+    padding: 1rem;
+    background-color: green;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+}
+.p{
+    display: flex;
+    justify-content:space-between;
+    padding: 2rem;
+}
+button:active{
+    scale: 0.9;
+}
+
