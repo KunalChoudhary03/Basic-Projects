@@ -6,27 +6,77 @@
 
 let arr = [
     {
-        user:"Salman",
-        age : 20,
-        img : "https://images.unsplash.com/photo-1727798450000-fd0e6e81c6b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNhbG1hbiUyMGtoYW58ZW58MHx8MHx8fDA%3D ",
-        marid : "married",
-        istatus : "Stranger"
+        user: "Salman",
+        age: 20,
+        img: "https://i.pinimg.com/474x/57/ca/ed/57caed7159cb4b90f2f54176c44cf839.jpg",
+        marid: "Married",
+        istatus: "Stranger"
     },
     {
-        user: "sachin",
-        age : 27,
-        img: "https://images.unsplash.com/photo-1705866000578-b3539e588f46?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNhbG1hbiUyMGtoYW58ZW58MHx8MHx8fDA%3D",
-        marid : "Unmarried",
-        istatus : "Stranger"
+        user: "Aman",
+        age: 22,
+        img: "https://i.pinimg.com/474x/1a/61/7e/1a617e1d8a03cb024a16c3f25f262464.jpg",
+        marid: "Unmarried",
+        istatus: "Stranger"
     },
     {
-        user: "rahul",
-        age : 30,
-        img : "https://images.unsplash.com/photo-1627060770557-e5d4581f6b61?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHNhbG1hbiUyMGtoYW58ZW58MHx8MHx8fDA%3D",
-        marid : "married",
-        istatus : "Stranger"
+        user: "Ravi",
+        age: 25,
+        img: "https://i.pinimg.com/474x/2f/71/02/2f710272d1a52f45fd45b7846e3c7996.jpg",
+        marid: "Married",
+        istatus: "Stranger"
+    },
+    {
+        user: "Karan",
+        age: 28,
+        img: "https://i.pinimg.com/474x/9d/94/c8/9d94c852f8a568ca81e18e0a1944ea3c.jpg",
+        marid: "Unmarried",
+        istatus: "Stranger"
+    },
+    {
+        user: "Raj",
+        age: 30,
+        img: "https://i.pinimg.com/474x/a0/ac/bf/a0acbf53848994b611d04e10f991bac1.jpg",
+        marid: "Married",
+        istatus: "Stranger"
+    },
+    {
+        user: "Ankit",
+        age: 24,
+        img: "https://i.pinimg.com/474x/87/d4/38/87d4385b03ccc69c0ce622e4e0f28d4e.jpg",
+        marid: "Unmarried",
+        istatus: "Stranger"
+    },
+    {
+        user: "Vivek",
+        age: 27,
+        img: "https://i.pinimg.com/474x/13/12/8e/13128ee04a9448dd05f46de3ab063636.jpg",
+        marid: "Married",
+        istatus: "Stranger"
+    },
+    {
+        user: "Deepak",
+        age: 26,
+        img: "https://i.pinimg.com/474x/d0/03/f5/d003f592f9d58ca5b3d6871ee28a0cd2.jpg",
+        marid: "Unmarried",
+        istatus: "Stranger"
+    },
+    {
+        user: "Nikhil",
+        age: 23,
+        img: "https://i.pinimg.com/474x/b0/e6/11/b0e611afd4e431652ab1dedda0e18cc2.jpg",
+        marid: "Unmarried",
+        istatus: "Stranger"
+    },
+    {
+        user: "Suresh",
+        age: 29,
+        img: "https://i.pinimg.com/474x/87/86/00/87860074e6e60ebd19815c738b34ac43.jpg",
+        marid: "Married",
+        istatus: "Stranger"
     }
 ];
+
 
 function heroFunction(){
     let sum = '';
