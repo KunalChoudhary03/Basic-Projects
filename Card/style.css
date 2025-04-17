@@ -17,19 +17,21 @@ body{
     justify-content: flex-start;
     background-color: black;
 }
-.card{
+ .main .card{
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    overflow: auto;
 }
 img{
     height: 150px;
     width: 150px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: top;
 }
-.card button{
+.main .card button{
     padding: 20px;
     border: none;
     border-radius: 10px;
