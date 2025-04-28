@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+@font-face{
+    font-family: neon;
+    src: url(https://dl.dropbox.com/s/df4zz9y6lmhocr9/England.otf?dl=0)
+  }
+/* Header Styles */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+    font-family: neon;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+    animation: neon-flicker 1.5s infinite;
+}
+
+header .logo p {
+    font-size: 0.8rem;
+    margin-left: -50px;
+}
+
+nav .navbar-nav .nav-link {
+    color: white;
+    font-size: 1.2rem;
+}
+
+nav .navbar-nav .nav-link:hover {
+    font-size: 1.5rem;
+    color: grey;
+}
+
+/* Hero Section Styling */
+.hero {
+    background-color: #000;
+    color: white;
+    padding: 80px 20px;
+    background-image: url('Black-Backgrounds-Desktop.jpg');
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h2, .hero p {
+    margin: 20px 0;
+}
+
+.hero h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.hero .button-container {
+    margin-top: 30px;
+}
+
+.hero .btn {
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 20%;
+    position: relative;
+}
+
+/* Neon Animation */
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+    }
+    20%, 24%, 55% {
+        text-shadow: 0 0 2px #39ff14, 0 0 4px #39ff14, 0 0 8px #39ff14;
+    }
+}

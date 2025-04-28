@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration</title>
+    <link rel="stylesheet" href="vendor.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container1 d-flex">
+            <div class="logo text-center">
+                <h1>VendorBender</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-section" class="hero">
+            <div id="particles-js"></div>
+            <div class="container position-relative" style="z-index: 1;">
+                <h2>Vendor Portal</h2>
+                <p>login to manage your contracts and performance.</p>
+            </div>
+        </section>
+
+        <section id="login" class="bg-light text-dark position-relative">
+            <div class="container position-relative text-center" style="z-index: 1;">
+                <h2>Vendor Login</h2>
+                <form id="login-form" class="mx-auto" style="max-width: 600px;">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter Email Address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VendorBender, All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Send login data to backend
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, password }),
+                });
+
+                const result = await response.json();
+
+                if (response.status === 200) {
+                    // Redirect to the dashboard or a success page
+                    alert('Login successful!');
+                    window.location.href = 'C:/Users/USER/Documents/Vendor Page/dashboard.html'; // Adjust as needed
+                } else {
+                    alert(result.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred during login.');
+            }
+        });
+    </script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

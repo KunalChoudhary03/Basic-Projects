@@ -1,0 +1,117 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    font-family: neon;
+    src: url(https://dl.dropbox.com/s/df4zz9y6lmhocr9/England.otf?dl=0)
+  }
+/* Header Styles */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2px;
+}
+header .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+    font-family: neon;
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+    animation: neon-flicker 1.5s infinite;
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+header .logo p {
+    font-size: 0.8rem;
+}
+
+/* Neon Animation */
+@keyframes neon-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 5px #ebf0ea, 0 0 10px #ebf0ea, 0 0 20px #ebf0ea;
+    }
+    20%, 24%, 55% {
+        text-shadow: 0 0 2px#ebf0ea, 0 0 4px #ebf0ea, 0 0 8px #ebf0ea;
+    }
+}
+
+/* Hero Section */
+.po-hero {
+    background-color: #000;
+    color: white;
+    padding: 80px 20px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.po-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+/* Make the contract table flexible */
+.po-section .container {
+    max-width: 100%;
+}
+
+.po-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.po-container {
+    max-height: 80vh; /* The max height of the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

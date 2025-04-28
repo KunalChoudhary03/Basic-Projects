@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Orders</title>
+    <link rel="stylesheet" href="purchase_orders.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>VendorBender</h1>
+            <p>Purchase Order Management</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="po-hero">
+        <h2>Manage Purchase Orders</h2>
+        <p>Create and track departmental purchase orders with ease.</p>
+    </section>
+
+    <!-- Purchase Order Section -->
+    <section class="po-section">
+        <div class="container">
+            <h2>Create a New Purchase Order</h2>
+            <form id="po-form" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="vendor-id" class="form-label">Vendor ID</label>
+                    <input type="number" id="vendor-id" class="form-control" placeholder="Enter Vendor ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="item-description" class="form-label">Item/Service Description</label>
+                    <input type="text" id="item-description" class="form-control" placeholder="Enter Description" required>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" id="quantity" class="form-control" placeholder="Enter Quantity" required>
+                </div>
+                <div class="mb-3">
+                    <label for="total-cost" class="form-label">Total Cost</label>
+                    <input type="number" id="total-cost" class="form-control" placeholder="Enter Total Cost" required>
+                </div>
+                <div class="mb-3">
+                    <label for="contract-id" class="form-label">Contract ID</label>
+                    <input type="number" id="contract-id" class="form-control" placeholder="Enter Contract ID" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Purchase Order</button>
+            </form>
+        </div>
+
+        <div class="container mt-5">
+            <h2>Existing Purchase Orders</h2>
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>POID</th>
+                        <th>Vendor ID</th>
+                        <th>Item Description</th>
+                        <th>Quantity</th>
+                        <th>Total Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="purchase-orders-table-body">
+                    <!-- Rows populated dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 VendorBender, All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch and display purchase orders
+        async function fetchPurchaseOrders() {
+            try {
+                const response = await fetch('http://localhost:3000/purchase-orders');
+                const purchaseOrders = await response.json();
+                const tableBody = document.getElementById('purchase-orders-table-body');
+                tableBody.innerHTML = ''; // Clear existing rows
+
+                purchaseOrders.forEach(order => {
+                    const row = `
+                        <tr>
+                            <td>${order.POID}</td>
+                            <td>${order.VendorID}</td>
+                            <td>${order.ItemDescription}</td>
+                            <td>${order.Quantity}</td>
+                            <td>${order.TotalCost}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } catch (error) {
+                console.error('Error fetching purchase orders:', error);
+            }
+        }
+
+        // Add a new purchase order
+        document.getElementById('po-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const vendorID = document.getElementById('vendor-id').value;
+            const itemDescription = document.getElementById('item-description').value;
+            const quantity = document.getElementById('quantity').value;
+            const totalCost = document.getElementById('total-cost').value;
+            const contractID = document.getElementById('contract-id').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/purchase-orders', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vendorID, itemDescription, quantity, totalCost, contractID }),
+                });
+
+                if (response.ok) {
+                    alert('Purchase order added successfully!');
+                    fetchPurchaseOrders(); // Refresh purchase order list
+                } else {
+                    alert('Error adding purchase order');
+                }
+            } catch (error) {
+                console.error('Error adding purchase order:', error);
+            }
+        });
+
+        // Fetch purchase orders on page load
+        fetchPurchaseOrders();
+    </script>
+</body>
+</html>

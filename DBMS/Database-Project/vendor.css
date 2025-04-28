@@ -1,0 +1,165 @@
+/* Vendor Page CSS */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header .logo p {
+    font-size: 1rem;
+}
+@font-face{
+    font-family: neon;
+    src: url(https://dl.dropbox.com/s/df4zz9y6lmhocr9/England.otf?dl=0)
+}
+.container1 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-family:neon;
+    color: white;
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);
+    animation: flicker 7s infinite;
+    filter:brightness(1);
+}
+@keyframes flicker{
+    9%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    10%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    11%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    12%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    13%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    66%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+    67%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    75%{
+      text-shadow:none;
+     filter:brightness(.4);
+    }
+    76%{
+    text-shadow: 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 .5vh var(--lights), 0 0 1vh var(--lights);;
+    filter:brightness(1)
+    }
+}
+
+
+.hero {
+    position: relative;
+    background-color: #000;
+    color: white;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.hero #particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+#login .container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.docs {
+    text-align: left;
+}
+.form{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 100vh;
+    
+
+
+}
+
+#login {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    text-align: center;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    text-align: center; 
+}
+
+#login h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;
+    text-align: center; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

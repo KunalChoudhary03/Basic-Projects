@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Performance</title>
+    <link rel="stylesheet" href="vendor_performance.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>VendorBender</h1>
+            <p>Vendor Performance Evaluation</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="vp-hero">
+        <h2>Manage Vendor Performance</h2>
+        <p>Add and track vendor performance evaluations.</p>
+    </section>
+
+    <!-- Performance Form Section -->
+    <section class="vp-section">
+        <div class="container">
+            <h2>Add a New Performance Evaluation</h2>
+            <form id="performance-form" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="vendor-id" class="form-label">Vendor ID</label>
+                    <input type="number" id="vendor-id" class="form-control" placeholder="Enter Vendor ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="rating" class="form-label">Rating</label>
+                    <input type="number" id="rating" class="form-control" placeholder="Enter Rating (1-5)" required>
+                </div>
+                <div class="mb-3">
+                    <label for="feedback" class="form-label">Feedback</label>
+                    <textarea id="feedback" class="form-control" rows="4" placeholder="Enter Feedback" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" id="date" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Performance</button>
+            </form>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 VendorBender, All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch and display vendor performance
+        async function fetchVendorPerformance() {
+            try {
+                const response = await fetch('http://localhost:3000/vendor-performance');
+                const performances = await response.json();
+                const tableBody = document.getElementById('performance-table-body');
+                tableBody.innerHTML = ''; // Clear existing rows
+
+                performances.forEach(performance => {
+                    const row = `
+                        <tr>
+                            <td>${performance.VendorID}</td>
+                            <td>${performance.Rating}</td>
+                            <td>${performance.Feedback}</td>
+                            <td>${performance.Date}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } catch (error) {
+                console.error('Error fetching vendor performance:', error);
+            }
+        }
+
+        // Add a new performance evaluation
+        document.getElementById('performance-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const vendorID = document.getElementById('vendor-id').value;
+            const rating = document.getElementById('rating').value;
+            const feedback = document.getElementById('feedback').value;
+            const date = document.getElementById('date').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/add-performance', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vendorID, rating, feedback, date }),
+                });
+
+                if (response.ok) {
+                    alert('Performance evaluation added successfully!');
+                    fetchVendorPerformance(); // Refresh performance list
+                } else {
+                    alert('Error adding performance evaluation');
+                }
+            } catch (error) {
+                console.error('Error adding performance evaluation:', error);
+            }
+        });
+
+        // Fetch vendor performance on page load
+        fetchVendorPerformance();
+    </script>
+</body>
+</html>

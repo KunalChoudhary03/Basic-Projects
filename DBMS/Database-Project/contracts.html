@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contracts</title>
+    <link rel="stylesheet" href="contracts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>VendorBender</h1>
+            <p>Contract Management</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contract-hero">
+        <h2>Manage Contracts</h2>
+        <p>Create, view, and manage vendor contracts with ease.</p>
+    </section>
+
+    <!-- Contract Form Section -->
+    <section class="contract-section">
+        <div class="container">
+            <h2>Create a New Contract</h2>
+            <form id="contract-form" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="vendor-id" class="form-label">Vendor ID</label>
+                    <input type="number" id="vendor-id" class="form-control" placeholder="Enter Vendor ID" required>
+                </div>
+                <div class="mb-3">
+                    <label for="terms" class="form-label">Terms</label>
+                    <textarea id="terms" class="form-control" rows="4" placeholder="Enter Contract Terms" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="expiry-date" class="form-label">Expiry Date</label>
+                    <input type="date" id="expiry-date" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Submit Contract</button>
+            </form>
+        </div>
+
+        <div class="tablecon">
+            <h2>Existing Contracts</h2>
+            <table class="table table-striped mt-3">
+                <thead>
+                    <tr>
+                        <th>Contract ID</th>
+                        <th>Vendor ID</th>
+                        <th>Terms</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="contracts-table-body">
+                    <!-- Rows populated dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 VendorBender, All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch and display contracts
+        async function fetchContracts() {
+            try {
+                const response = await fetch('http://localhost:3000/contracts');
+                const contracts = await response.json();
+                const tableBody = document.getElementById('contracts-table-body');
+                tableBody.innerHTML = ''; // Clear existing rows
+
+                contracts.forEach(contract => {
+                    const row = `
+                        <tr>
+                            <td>${contract.ContractID}</td>
+                            <td>${contract.VendorID}</td>
+                            <td>${contract.Terms}</td>
+                            <td>${contract.ExpiryDate}</td>
+                            <td>${contract.Status}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } catch (error) {
+                console.error('Error fetching contracts:', error);
+            }
+        }
+
+        // Add a new contract
+        document.getElementById('contract-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const vendorID = document.getElementById('vendor-id').value;
+            const terms = document.getElementById('terms').value;
+            const expiryDate = document.getElementById('expiry-date').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/contracts', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ vendorID, terms, expiryDate, status: 'Active' }),
+                });
+
+                if (response.ok) {
+                    alert('Contract added successfully!');
+                    fetchContracts(); // Refresh contract list
+                } else {
+                    alert('Error adding contract');
+                }
+            } catch (error) {
+                console.error('Error adding contract:', error);
+            }
+        });
+
+        // Fetch contracts on page load
+        fetchContracts();
+    </script>
+</body>
+</html>
