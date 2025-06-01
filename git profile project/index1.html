@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Profile Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 min-h-screen flex items-center justify-center p-4">
+
+  <div class="w-full max-w-md bg-gray-900 shadow-xl rounded-2xl p-6 space-y-6 text-white">
+    <h1 class="text-2xl font-bold text-center">GitHub Profile Finder</h1>
+
+    <!-- Search Form -->
+    <form class="flex gap-2">
+      <input 
+        type="text" 
+        placeholder="Enter GitHub username"
+        class="usernameinp flex-1 px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <button 
+        type="submit"
+        class=" search px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+      >
+        Search
+      </button>
+    </form>
+
+    <!-- Static Profile Card -->
+   <div class=" card bg-gray-800 p-4 rounded-lg shadow-inner flex flex-col items-center space-y-3">
+
+   </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
