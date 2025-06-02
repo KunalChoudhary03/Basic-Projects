@@ -82,3 +82,11 @@ right: 5%;
 .elem:active{
     scale: 0.97;
 }
+.fullElem{
+    height: 100%;
+    width: 100%;
+    background-color: var(--tri1);
+    padding: 40px;
+    font-size: 60px;
+    display: none;
+}
