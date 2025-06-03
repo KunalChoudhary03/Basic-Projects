@@ -24,3 +24,30 @@ btn.addEventListener('click',function(){
 
 }
 openFeatures();
+
+let form =  document.querySelector(".addTask form");
+let taskInput  = document.querySelector(".addTask form input");
+let taskDetailsInput = document.querySelector("addTask form textarea");
+let taskCheckbox  = document.querySelector("addTask form #check");
+
+let currentTask = [
+    {
+        task : "mandir jao",details : "Hanuman ji walw",
+        imp:true
+    },
+    {
+        task : "recording karo",details : "cohort k liye ",
+        imp:true
+    },
+    {
+        task : "Lunch at 2 PM ",details : "nahi to mammi datengi",
+        imp:false
+    }
+]
+// form.addEventListener("submit",function(e){
+//     e.preventDefault();
+
+// }
+// )
+
+let allTask = document.querySelector(".allTask");
