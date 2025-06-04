@@ -25,10 +25,7 @@ btn.addEventListener('click',function(){
 }
 openFeatures();
 
-let form =  document.querySelector(".addTask form");
-let taskInput  = document.querySelector(".addTask form input");
-let taskDetailsInput = document.querySelector("addTask form textarea");
-let taskCheckbox  = document.querySelector("addTask form #check");
+
 
 let currentTask = [
     {
@@ -44,10 +41,37 @@ let currentTask = [
         imp:false
     }
 ]
-// form.addEventListener("submit",function(e){
-//     e.preventDefault();
 
-// }
-// )
 
-let allTask = document.querySelector(".allTask");
+function renderTask(){
+    let allTask = document.querySelector(".allTask");
+let sum = '';
+currentTask.forEach(function(elem){
+sum = sum + `
+            <div class="task">
+              <h5>${elem.task}<span class=${elem.imp}>imp</span></h5>
+              <button>Mark as completed</button>
+            </div>`
+    
+})
+allTask.innerHTML = sum
+}
+renderTask();
+
+
+let form =  document.querySelector(".addTask form");
+let taskInput  = document.querySelector(".addTask form input");
+let taskDetailsInput = document.querySelector("addTask form textarea");
+let taskCheckbox  = document.querySelector("addTask form #check");
+
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    currentTask.push(
+        {task:taskInput.value,
+        details:taskDetailsInput.value,
+        imp:taskCheckbox.checked
+    }
+   
+)
+ renderTask();
+})
