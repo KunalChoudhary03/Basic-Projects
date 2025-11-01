@@ -16,6 +16,12 @@
                 <div class="inner">
                     <div class="header-row" style="display:flex;align-items:center;justify-content:space-between">
                         <div class="brand">Portfolio.</div>
+                        <!-- hamburger for small screens -->
+                        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                         <nav aria-label="Main navigation">
                             <ul>
                                 <li><a class="active" href="#home">Home</a></li>
@@ -197,9 +203,9 @@ When I’m not coding, I’m usually learning something new about JavaScript, im
                     <h3 style="color:var(--accent);margin-bottom:8px">Contact Me</h3>
                     <p style="color:var(--muted);margin-bottom:12px">Have any project? Let's build something great together.</p>
                     <div class="contact-links">
-                        <a class="cta-btn" href="mailto:kunalchoudhary3344@gmail.com">Let's Chat</a>
-                        <!-- Downloadable CV (place the PDF file `My Resume.pdf` in the site root) -->
-                        <a class="btn outline" href="My Resume.pdf" download="Kunal-Choudhary-CV.pdf" aria-label="Download my CV">Download CV</a>
+                        <a class="cta-btn" href="https://ai-chatbox-saarthi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open chat">Let's Chat</a>
+                        <!-- Downloadable CV: open Resume.pdf in a new tab (fallback to My Resume.pdf) -->
+                        <a id="download-cv" class="btn outline" href="Resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open Resume">Download CV</a>
 
                         <div class="contact-info" style="margin-top:12px;text-align:center">
                             <p style="color:var(--muted);margin:6px 0"><strong style="color:#fff">Email:</strong> <a href="mailto:kunalchoudhary3344@gmail.com">kunalchoudhary3344@gmail.com</a></p>
@@ -261,9 +267,27 @@ When I’m not coding, I’m usually learning something new about JavaScript, im
                         navLinks.forEach(l=>l.classList.remove('active'));
                         // set active on clicked
                         this.classList.add('active');
+                        // if mobile menu is open, close it
+                        const nav = document.querySelector('nav');
+                        const hamb = document.querySelector('.hamburger');
+                        if(nav && nav.classList.contains('open')){
+                            nav.classList.remove('open');
+                            hamb && hamb.setAttribute('aria-expanded','false');
+                        }
                         // allow default anchor behavior (smooth scroll)
                     });
                 });
+
+                // hamburger toggle for mobile
+                (function(){
+                    const hamburger = document.querySelector('.hamburger');
+                    const nav = document.querySelector('nav');
+                    if(!hamburger || !nav) return;
+                    hamburger.addEventListener('click', function(e){
+                        const isOpen = nav.classList.toggle('open');
+                        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                    });
+                })();
             })();
 
             // Replace modal behaviour: HIRE ME should scroll to contact section
@@ -282,6 +306,38 @@ When I’m not coding, I’m usually learning something new about JavaScript, im
                         }, 420);
                     });
                 }
+            })();
+
+            // Highlight nav link based on scroll position (intersection observer)
+            (function(){
+                const navLinks = Array.from(document.querySelectorAll('nav a'));
+                const sections = Array.from(document.querySelectorAll('section[id]'));
+                if(!navLinks.length || !sections.length) return;
+
+                const idToLink = {};
+                navLinks.forEach(a=>{
+                    const href = a.getAttribute('href');
+                    if(!href || !href.startsWith('#')) return;
+                    idToLink[href.replace('#','')] = a;
+                });
+
+                const obs = new IntersectionObserver((entries)=>{
+                    // pick the section with largest intersectionRatio that's intersecting
+                    let best = null;
+                    entries.forEach(en=>{
+                        if(!en.isIntersecting) return;
+                        if(!best || en.intersectionRatio > best.intersectionRatio) best = en;
+                    });
+                    if(best){
+                        const id = best.target.id;
+                        // remove active from all
+                        navLinks.forEach(l=>l.classList.remove('active'));
+                        const link = idToLink[id];
+                        if(link) link.classList.add('active');
+                    }
+                }, {root:null, threshold:[0.35,0.6]});
+
+                sections.forEach(s=>obs.observe(s));
             })();
 
             // Click sound: use Web Audio API to play a short click for interactive elements
@@ -323,6 +379,28 @@ When I’m not coding, I’m usually learning something new about JavaScript, im
                     try{ playClick(); }catch(err){/* ignore */}
                 }, {passive:true});
             })();
+
+            // CV open with fallback: try Resume.pdf first, otherwise open My Resume.pdf
+            (function(){
+                const cv = document.getElementById('download-cv');
+                if(!cv) return;
+                cv.addEventListener('click', function(e){
+                    e.preventDefault();
+                    const primary = 'Resume.pdf';
+                    const fallback = 'My Resume.pdf';
+                    // try HEAD request to see if primary exists (works when served over HTTP)
+                    try{
+                        fetch(primary, {method: 'HEAD'}).then(r=>{
+                            if(r && r.ok){ window.open(primary, '_blank'); }
+                            else { window.open(fallback, '_blank'); }
+                        }).catch(()=>{ window.open(fallback, '_blank'); });
+                    }catch(err){ window.open(fallback, '_blank'); }
+                });
+            })();
         </script>
+        <!-- Sticky chat FAB: bottom-right corner -->
+        <a id="chat-fab" class="chat-fab" href="https://ai-chatbox-saarthi.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open chat">
+            Let's Talk
+        </a>
     </body>
 </html>
