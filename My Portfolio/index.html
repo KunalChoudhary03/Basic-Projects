@@ -1,136 +1,328 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <main>
-        <section class="main-container">
-            <section class="nav-bar">
-                <div class="my-name"><span>K</span>unal.</div>
-                <div class="both_ham">
-                <div class="hamburger">
-                    <img src="img/menu.png" alt="" onclick="myFun()"></div>
-                <div  class="ull">
-                    <ul>
-                        <li><a href="#main-box">Home</a></li>
-                        <li><a href="#about-me">About</a></li>
-                        <li><a href="#My-certifiaction">Service</a></li>
-                        <li><a href="#location">Location</a></li>
-                        <li><a href="#contact-me">Contact</a></li>
-                    </ul>
-                </div></div>
-            </section>
-            <section id="main-box">
-                <div class="written">
-                    <div class="mern">Mern stack devloper</div>
-                    <div class="hi">Hi,I'm <span>Kunal</span><br> Choudhary from Indore</div>
-                </div>
-         <div class="img">
-            <img src="img/main-1.jpg" alt="">
-         </div>
-         
-            </section>
-          <div class="line"><hr></div>
-          <section  id="about-me">
-              <div class="abt"><span>A</span>bout Me.</div>
-                <div class="about">
-                    <div class="abt-img"><img src="img/main.jpg" alt=""></div>
-                    <div class="abt-me">Lorem <span>ipsum</span> dolor sit amet, consectetur adipisicing elit. Aperiam repellat minus obcaecati facere eveniet quos animi sit architecto? Aliquam, ducimus. Ad deleniti nemo sed voluptatem id, commodi, similique iste vitae exercitationem accusamus temporibus quas tenetur.</div>
-                    </div>
-                    
-          </section>
-          <div class="line"><hr></div>
-          <section id="skill-box">
-            <div class="skills">
-                <div class="skill-text"><span>S</span>kills.</div>
-               <div class="logo">
-                <img src="img/html.jpg" alt="">
-                <img src="img/css.jpg" alt="">
-                <img src="img/js.jpg" alt="">
-                <img src="img/react.jpg" alt="">
-                <img src="img/tailwind.jpg" alt="">
-               </div>
-            </div>
-          </section>
-          <div class="line"><hr></div>
-          <section id="project">
-            <div class="project-text"><span>P</span>rojects.</div>
-            <div class="project-img">
-                <div class="card">
-                    <div class="image">
-               <a href="https://basic-projects-hdb1.vercel.app/"> <img src="img/calc.png" alt=""></a></div>
-               <div class="text">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi atque, vero consectetur voluptates illum aliquam?</p></div>
-            </div>
-                <div class="card">
-                    <div class="image">
-               <a href="https://basic-projects.vercel.app/"> <img src="img/fashion.png" alt=""></a></div>
-               <div class="text">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi atque, vero consectetur voluptates illum aliquam?</p></div>
-            </div>
-                <div class="card">
-                    <div class="image">
-               <a href="https://basic-projects-qr6z.vercel.app/"> <img src="img/music.png" alt=""></a></div>
-               <div class="text">
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi atque, vero consectetur voluptates illum aliquam?</p></div>
-            </div>
-            
-            </div>
-          </section>
-          <div class="line"><hr></div>
-          <section id="My-certifiaction">
-            <div class="Services"><span>S</span>ervices.</div>
- <div class="para">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero magni, eius pariatur atque non, aut quod assumenda aliquid, culpa illum aspernatur natus perspiciatis neque doloremque commodi nulla deleniti inventore repudiandae modi veritatis perferendis dignissimos fugit maiores laudantium. Quibusdam enim magnam aperiam placeat magni provident aut?
- </div>
-          </section>
-          <div class="line"><hr></div>
-          <section id="location">
-            <div class="map">
-                <div class="Location"><span>L</span>ocation.</div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d134630.888479576!2d75.78144882890231!3d22.723951637627284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e1!3m2!1sen!2sin!4v1741405283226!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </section>
-          <div class="line"><hr></div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Kunal — Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-          <section id="contact-me">
-            <div class="contact"><span>C</span>ontact Me.</div>
-            <div class="both">
-            <div class="logo">
-                <div class="gmail">
-                    <img src="https://cdn-icons-png.flaticon.com/128/15047/15047587.png" alt="">
-                    kunalchoudhary@gmail.com
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container" role="document">
+            <header>
+                <div class="inner">
+                    <div class="header-row" style="display:flex;align-items:center;justify-content:space-between">
+                        <div class="brand">Portfolio.</div>
+                        <nav aria-label="Main navigation">
+                            <ul>
+                                <li><a class="active" href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#project">Projects</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="phone">
-                    <img src="https://cdn-icons-png.flaticon.com/128/724/724664.png" alt="">
-                    9999999999
+            </header>
+
+            <!-- HERO -->
+            <section class="hero fade-up" aria-labelledby="hero-title">
+                <div class="inner" id="home">
+                    <div class="hero-left">
+                        <div class="greeting">HELLO!</div>
+                        <h1 id="hero-title">I'm <span class="name-accent">Kunal<br/>Choudhary</span></h1>
+                        <div class="subtitle">Fullstack Web Developer</div>
+                        <p style="margin-top:18px">Building robust and beautiful web apps — I focus on performant frontends and reliable backends.</p>
+                        <div style="margin-top:22px">
+                            <a id="hire-btn" class="btn" href="#contact">HIRE ME</a>
+                            <a class="btn outline" href="#project">MY WORKS</a>
+                        </div>
+                    </div>
+
+                    <div class="profile-wrap">
+                        <div class="profile" aria-hidden="true">
+                            <img src="img/main-1.jpg" alt="Profile" />
+                            <div class="glow"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="social-img">
-                   <a href="https://github.com/KunalChoudhary03"> <img src="img/github.jpg" alt=""></a>
-                   <a href="www.linkedin.com/in/
-                   kunal-choudhary-40839a338
-                   "></a> <img src="img/linkedin.jpg" alt=""></a>
-                   <a href="www.facebook.com"></a> <img src="img/insta.jpg" alt=""></a>
-                   <a href="https://x.com/?lang=en"></a> <img src="img/x.jpg" alt=""></a>
+            </section>
+
+            <hr class="section-sep">
+
+            <!-- ABOUT -->
+            <section id="about" class="about fade-up" aria-labelledby="about-title">
+                <div class="inner">
+                    <div><img src="img/main.jpg" alt="About image"></div>
+                    <div>
+                        <h3 id="about-title">About Me</h3>
+                        <div style="color:var(--muted);margin-top:8px;line-height:1.7;white-space:pre-wrap">
+Hi, I’m Kunal Choudhary, a Full Stack Web Developer specializing in the MERN stack (MongoDB, Express.js, React, and Node.js). I love building modern, scalable, and user-friendly web applications that combine clean design with powerful functionality.
+
+With a strong passion for coding and problem-solving, I enjoy transforming ideas into real-world digital solutions — from developing responsive frontends to architecting efficient backends. I’m constantly exploring new technologies to stay ahead in the ever-evolving world of web development.
+
+When I’m not coding, I’m usually learning something new about JavaScript, improving performance in my projects, or experimenting with new frameworks and tools to push my skills further.
+                        </div>
+                    </div>
                 </div>
-                <div class="btn"><button>GitHub</button></div>
-            </div>
-            <div class="input">
-                <input type="text" placeholder="Your name">
-                <input type="text" placeholder="Your email">
-                <input type="text" placeholder="Your message" id="msg">
-                <button class="send-btn">Send</button></div>
-            </div>
-          </section>
-        </section>
-    </main>
-    <script src="script.js"></script>
-</body>
+            </section>
+
+            <hr class="section-sep">
+
+            <!-- SKILLS -->
+            <section id="skills" class="fade-up">
+                <div class="inner">
+                    <div class="skills">
+                        <div class="skills-left">
+                            <h3 style="color:var(--accent);margin-bottom:8px">My Skills</h3>
+                            <p style="color:var(--muted)">Skills reflect our knowledge. I bring both UI sensibility and engineering rigor to the projects I build.</p>
+                           
+                        </div>
+
+                        <div>
+                            <div class="skill-row">
+                                <div class="skill-label">HTML</div>
+                                <div class="progress"><i style="width:95%"></i></div>
+                                <div class="skill-percent">95%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">CSS</div>
+                                <div class="progress"><i style="width:90%"></i></div>
+                                <div class="skill-percent">90%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">SCSS</div>
+                                <div class="progress"><i style="width:82%"></i></div>
+                                <div class="skill-percent">82%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">JavaScript</div>
+                                <div class="progress"><i style="width:88%"></i></div>
+                                <div class="skill-percent">88%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">Tailwind</div>
+                                <div class="progress"><i style="width:80%"></i></div>
+                                <div class="skill-percent">80%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">React</div>
+                                <div class="progress"><i style="width:86%"></i></div>
+                                <div class="skill-percent">86%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">MongoDB</div>
+                                <div class="progress"><i style="width:76%"></i></div>
+                                <div class="skill-percent">76%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">Node.js</div>
+                                <div class="progress"><i style="width:80%"></i></div>
+                                <div class="skill-percent">80%</div>
+                            </div>
+                            <div class="skill-row">
+                                <div class="skill-label">Express.js</div>
+                                <div class="progress"><i style="width:78%"></i></div>
+                                <div class="skill-percent">78%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-sep">
+
+            <!-- PROJECTS -->
+            <section id="project" class="fade-up">
+                <div class="inner">
+                    <h3 style="color:var(--accent);text-align:center;margin-bottom:14px">Projects</h3>
+                    
+                    <div class="project-img">
+                        <div class="card">
+                            <div class="image">
+                                <a href="https://hackthon-project-self.vercel.app"><img src="img/Mentore.png" alt="Mentore project"></a>
+                            </div>
+                            <div class="text">
+                                <p>Mentore Connect is a skill-swap and mentorship platform where users can connect, share knowledge, and learn new skills from each other. It enables users to create profiles, list their skills, find mentors, and collaborate through an intuitive and user-friendly interface.</p>
+                                <p class="project-status"><strong>Status:</strong> Completed</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <a href="https://jeeravan.vercel.app"><img src="img/Jeeravan.png" alt="Jeeravan AI"></a>
+                            </div>
+                            <div class="text">
+                                <p>Jeeravan is an AI-powered eCommerce platform built with the MERN stack. It offers smart product recommendations, secure authentication, and smooth cart management with a clean, responsive UI.
+</p>
+                                <p class="project-status"><strong>Status:</strong> Completed</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <a href="https://basic-projects-qr6z.vercel.app/"><img src="img/music.png" alt="Music project"></a>
+                            </div>
+                            <div class="text">
+                                <p>A clean and interactive music player built using HTML, CSS, and JavaScript, featuring four fully functional songs with smooth play, pause, and next/previous controls. Designed for a simple and enjoyable listening experience.</p>
+                                <p class="project-status"><strong>Status:</strong> Completed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-cta" style="text-align:center;margin-top:18px">
+                        <a class="btn" href="https://www.linkedin.com/in/kunal-choudhary-40839a338" target="_blank" rel="noopener noreferrer" aria-label="See all my work on LinkedIn">See all my work</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- LOCATION -->
+            <section id="location" class="fade-up" aria-labelledby="location-title">
+                <div class="inner">
+                    <h3 id="location-title" style="color:var(--accent);text-align:center;margin-bottom:14px">Location</h3>
+                    <div class="map" style="display:flex;justify-content:center;margin-top:12px">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d134630.88847957598!2d75.78144882890231!3d22.723951637627284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e1!3m2!1sen!2sin!4v1761991713487!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="section-sep">
+
+            <!-- CONTACT CTA -->
+            <section id="contact" class="contact-cta fade-up">
+                <div class="inner">
+                    <h3 style="color:var(--accent);margin-bottom:8px">Contact Me</h3>
+                    <p style="color:var(--muted);margin-bottom:12px">Have any project? Let's build something great together.</p>
+                    <div class="contact-links">
+                        <a class="cta-btn" href="mailto:kunalchoudhary3344@gmail.com">Let's Chat</a>
+                        <!-- Downloadable CV (place the PDF file `My Resume.pdf` in the site root) -->
+                        <a class="btn outline" href="My Resume.pdf" download="Kunal-Choudhary-CV.pdf" aria-label="Download my CV">Download CV</a>
+
+                        <div class="contact-info" style="margin-top:12px;text-align:center">
+                            <p style="color:var(--muted);margin:6px 0"><strong style="color:#fff">Email:</strong> <a href="mailto:kunalchoudhary3344@gmail.com">kunalchoudhary3344@gmail.com</a></p>
+                            <p style="color:var(--muted);margin:6px 0"><strong style="color:#fff">Phone:</strong> +91-9630775681</p>
+                        </div>
+
+                        <div class="socials" style="margin-top:12px;gap:12px;flex-wrap:wrap;justify-content:center">
+                            <a class="btn outline" href="https://github.com/KunalChoudhary03" target="_blank" rel="noopener noreferrer" aria-label="Open GitHub">GitHub</a>
+                            <a class="btn outline" href="https://www.linkedin.com/in/kunal-choudhary-40839a338" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="inner">
+                    <div class="footer-bar">Created by KunalChoudhary03 | © <span id="year"></span></div>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            // small runtime helpers
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // If the page opened with #contact in the URL unintentionally, remove the hash
+            // so the page stays at the hero on first load. This only adjusts the URL and
+            // scroll position on load — deliberate anchor navigation still works.
+            (function(){
+                if(location.hash === '#contact'){
+                    try{
+                        history.replaceState(null, '', location.pathname + location.search);
+                    }catch(e){ /* ignore */ }
+                    // make sure we're at the top so hero is visible
+                    window.scrollTo(0,0);
+                }
+            })();
+
+            // Animate sections when they enter viewport
+            (function(){
+                const options = {root: null, rootMargin: '0px', threshold: 0.12};
+                const io = new IntersectionObserver((entries)=>{
+                    entries.forEach(e=>{
+                        if(e.isIntersecting){
+                            e.target.classList.add('is-visible');
+                        }
+                    });
+                }, options);
+
+                document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+            })();
+
+            // Nav: underline active link on click (and keep only that underline)
+            (function(){
+                const navLinks = document.querySelectorAll('nav a');
+                navLinks.forEach(link=>{
+                    link.addEventListener('click', function(e){
+                        // remove active from all
+                        navLinks.forEach(l=>l.classList.remove('active'));
+                        // set active on clicked
+                        this.classList.add('active');
+                        // allow default anchor behavior (smooth scroll)
+                    });
+                });
+            })();
+
+            // Replace modal behaviour: HIRE ME should scroll to contact section
+            (function(){
+                const hire = document.getElementById('hire-btn');
+                const contact = document.getElementById('contact');
+                if(hire && contact){
+                    hire.addEventListener('click', function(e){
+                        // allow the default anchor behavior to perform the smooth scroll
+                        // after a short delay, move focus to the contact section for accessibility
+                        setTimeout(()=>{
+                            contact.setAttribute('tabindex','-1');
+                            contact.focus();
+                            // cleanup tabindex after focus
+                            setTimeout(()=>contact.removeAttribute('tabindex'),1000);
+                        }, 420);
+                    });
+                }
+            })();
+
+            // Click sound: use Web Audio API to play a short click for interactive elements
+            (function(){
+                let audioCtx = null;
+                function initAudio(){
+                    try{
+                        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    }catch(e){
+                        audioCtx = null;
+                    }
+                }
+
+                function playClick(){
+                    if(!audioCtx) initAudio();
+                    if(!audioCtx) return; // can't create audio
+
+                    const now = audioCtx.currentTime;
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'square';
+                    osc.frequency.setValueAtTime(2200, now);
+                    // very short envelope for a click
+                    gain.gain.setValueAtTime(0.0001, now);
+                    gain.gain.exponentialRampToValueAtTime(0.25, now + 0.001);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.06);
+
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(now);
+                    osc.stop(now + 0.07);
+                }
+
+                // Delegate pointerdown to interactive elements (anchors, buttons, elements with .btn)
+                document.addEventListener('pointerdown', function(e){
+                    const el = e.target.closest && e.target.closest('a,button,.btn');
+                    if(!el) return;
+                    // don't play for links that don't navigate (e.g., anchors with href="#")? still play
+                    try{ playClick(); }catch(err){/* ignore */}
+                }, {passive:true});
+            })();
+        </script>
+    </body>
 </html>
