@@ -632,7 +632,28 @@ nav a {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-nav a.active {
+/* hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 0;
+  width: 42px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background: #d8d2d2;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-direction: column; /* stack the three bars vertically */
   color: var(--accent);
   border-bottom: 3px solid var(--accent);
   padding-bottom: 4px;
@@ -803,6 +824,8 @@ hr.section-sep {
   }
 }
 /* About */
+ 
+/* About */
 .about {
   display: block;
 }
@@ -967,8 +990,17 @@ hr.section-sep {
 .project-img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 22px;
   margin-top: 20px;
+  align-items: start;
+}
+
+/* tablet breakpoint between desktop and smaller screens */
+@media (max-width: 1200px) {
+  .project-img {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
 }
 
 /* Project status badge */
@@ -986,6 +1018,8 @@ hr.section-sep {
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -994,7 +1028,9 @@ hr.section-sep {
 }
 
 .card .image {
-  height: 180px;
+  /* use aspect-ratio so images resize proportionally */
+  width: 100%;
+  aspect-ratio: 16/10;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), transparent);
 }
@@ -1013,10 +1049,23 @@ hr.section-sep {
 }
 
 .card .text {
-  padding: 12px 14px;
+  padding: 16px 14px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.6;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .text p{margin-bottom:12px}
+
+/* smaller screens: make cards full width and increase spacing */
+@media (max-width: 560px) {
+  .project-img { grid-template-columns: 1fr; gap: 16px; }
+  .card .image { aspect-ratio: 16/9; }
+  .card .text { padding: 14px; font-size: 15px; }
 }
 
 @media (max-width: 980px) {
@@ -1108,6 +1157,67 @@ footer {
   .profile {
     width: 320px;
     height: 320px;
+  }
+}
+/* Sticky chat FAB (bottom-right) */
+.chat-fab{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:1400;
+  background:var(--accent);
+  color:#000;
+  padding:12px 16px;
+  border-radius:28px;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,0.4);
+  transition:transform .16s ease, box-shadow .16s ease;
+}
+.chat-fab:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,0.45)}
+@media (max-width:560px){
+  .chat-fab{right:12px;bottom:12px;padding:10px 12px;border-radius:24px;font-size:14px}
+}
+/* Mobile header overrides to ensure hamburger shows and nav collapses correctly
+   Targets the actual header structure used in the HTML (.inner .header-row) */
+@media (max-width: 900px) {
+  .inner .header-row .hamburger {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    border: 0;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 1200;
+  }
+
+  /* hide desktop nav list and show dropdown when .open is applied to nav */
+  .inner .header-row nav ul {
+    display: none !important;
+    position: absolute;
+    right: 18px;
+    top: 64px;
+    background: rgba(5, 5, 5, 0.95);
+    padding: 12px;
+    border-radius: 10px;
+    flex-direction: column;
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    z-index: 1100;
+  }
+
+  .inner .header-row nav.open ul {
+    display: flex !important;
+  }
+
+  .inner .header-row nav.open ul li {
+    padding: 8px 0;
+  }
+
+  .inner .header-row nav.open ul li a {
+    color: #fff;
   }
 }
 @media (max-width: 560px) {
